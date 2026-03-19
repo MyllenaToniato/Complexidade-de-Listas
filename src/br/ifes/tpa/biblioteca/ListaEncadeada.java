@@ -84,7 +84,7 @@ public class ListaEncadeada<T> implements IColecao<T> {
             builder.append(atual.getValor());
 
             if (atual.getProximo() != null) {
-                builder.append(" -> ");
+                builder.append(",");
             }
 
             atual = atual.getProximo();
