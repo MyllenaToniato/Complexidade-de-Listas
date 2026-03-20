@@ -1,0 +1,15 @@
+Breaking Bad;2008;EUA
+Stranger Things;2016;EUA
+Dark;2017;Alemanha
+La Casa de Papel;2017;Espanha
+Friends;1994;EUA
+The Office;2005;EUA
+Game of Thrones;2011;EUA
+The Crown;2016;Reino Unido
+Black Mirror;2011;Reino Unido
+Narcos;2015;EUA
+The Witcher;2019;EUA
+Sherlock;2010;Reino Unido
+House of Cards;2013;EUA
+Vikings;2013;Canadá
+Peaky Blinders;2013;Reino Unido
