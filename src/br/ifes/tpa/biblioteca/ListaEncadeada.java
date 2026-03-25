@@ -4,7 +4,7 @@ public class ListaEncadeada<T> implements IColecao<T> {
 
     private No<T> inicio;
     private int totalNos;
-    // no fim, totalNos vai permitir com que a operacao de percorrer a lista encadeada migre de O(n) para O(1).
+    // No fim, totalNos vai permitir com que a operacao de percorrer a lista encadeada migre de O(n) para O(1).
 
     public ListaEncadeada() { // CONSTRUTOR DA CLASSE
         this.inicio = null;
@@ -15,9 +15,9 @@ public class ListaEncadeada<T> implements IColecao<T> {
     @Override
     public void adicionar(T novoValor) {
         No<T> novoNo = new No<>(novoValor);
-        novoNo.setProximo(this.inicio); // nó atual conecta com o nó anterior
-        this.inicio = novoNo; // atualiza o nó inicial = novo nó inserido
-        this.totalNos++; // atualiza a quantidade de nós da lista encadeada
+        novoNo.setProximo(this.inicio); // Nó atual conecta com o nó anterior
+        this.inicio = novoNo; // Atualiza o nó inicial = novo nó inserido
+        this.totalNos++; // Atualiza a quantidade de nós da lista encadeada
     }
 
     @Override
@@ -25,19 +25,19 @@ public class ListaEncadeada<T> implements IColecao<T> {
         No<T> atual = this.inicio;
 
         while (atual != null) {
-            if (atual.getValor().equals(valor)) { // vamos lidar com objetos (como Alunos ou Strings, etc) por isso usamos .equals() ao invés de ==
-                return atual.getValor(); // retorna o obj encontrado
+            if (atual.getValor().equals(valor)) { // Vamos lidar com objetos (como Alunos ou Strings, etc) por isso usamos .equals() ao invés de ==
+                return atual.getValor(); // Retorna o obj encontrado
             }
             atual = atual.getProximo();
         }
 
-        return null; // se chegou aqui, obj ta fora do loop
+        return null; // Se chegou aqui, obj ta fora do loop
     }
 
     @Override
     public boolean remover(T valor) {
         if (this.inicio == null)
-            return false; // lista encadeada vazia, não tem o que remover
+            return false; // Lista encadeada vazia, não tem o que remover
 
         // CASE 1: O VALOR A SER REMOVIDO ESTÁ NO PRIMEIRO NÓ DA LISTA
 
@@ -54,11 +54,11 @@ public class ListaEncadeada<T> implements IColecao<T> {
 
         while (atual != null) {
             if (atual.getValor().equals(valor)) {
-                anterior.setProximo(atual.getProximo()); // o nó anterior aponta para o próximo do nó atual, já que o atual será removido
+                anterior.setProximo(atual.getProximo()); // O nó anterior aponta para o próximo do nó atual, já que o atual será removido
                 this.totalNos--;
                 return true;
             }
-            // continua percorrendo a lista até encontrar o obj procurado...
+            // Continua percorrendo a lista até encontrar o obj procurado...
             anterior = atual;
             atual = atual.getProximo();
         }
@@ -72,19 +72,19 @@ public class ListaEncadeada<T> implements IColecao<T> {
     }
 
     @Override
-    public String toString() { // possibilita traduzir o endereço de memória para texto
+    public String toString() { // Possibilita traduzir o endereço de memória para texto
         if (this.inicio == null) {
             return "A Lista está vazia";
         }
 
-        StringBuilder builder = new StringBuilder(); // classe do java que monta textos longos (evitar lentidão da concatenação de strings)
+        StringBuilder builder = new StringBuilder(); // Classe do java que monta textos longos (evitar lentidão da concatenação de strings)
         No<T> atual = this.inicio;
 
         while (atual != null) {
             builder.append(atual.getValor());
 
             if (atual.getProximo() != null) {
-                builder.append(",");
+                builder.append(", ");
             }
 
             atual = atual.getProximo();
