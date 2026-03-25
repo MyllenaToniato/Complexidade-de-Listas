@@ -5,6 +5,8 @@ import br.ifes.tpa.biblioteca.IColecao;
 import br.ifes.tpa.biblioteca.ListaEncadeada;
 import br.ifes.tpa.util.MedidorTempo;
 import br.ifes.tpa.util.ResultadoMedicao;
+import br.ifes.tpa.biblioteca.ListaEncadeadaArrayList;
+import br.ifes.tpa.biblioteca.ListaEncadeadaLinkedList;
 
 import java.util.Scanner;
 import java.io.BufferedReader;
@@ -19,7 +21,7 @@ public class Main {
             ResultadoMedicao<Integer> resultado = MedidorTempo.medirComRetorno(() -> { //Ao identificar o arquivo, já é iniciado o cálculo do tempo
                 int quantidade = 0;
 
-                try (BufferedReader buff = new BufferedReader(new FileReader("dados.txt"))) { //Localização do arquivo
+                try (BufferedReader buff = new BufferedReader(new FileReader("series_100k.txt"))) { //Localização do arquivo
                     System.out.println("Carregando dados do arquivo...");
                     String linha;
 
