@@ -6,6 +6,10 @@ Este repositório é um projeto da disciplina de Técnicas de Programação Avan
 2) Realização de testes empíricos para verificação da complexidade dos códigos gerados.
 
 # Organização
-
+O código foi organizado em quatro pastas.
+1) App: Contém a classe Main
+2) Biblioteca: Interface IColecao, ListaEncadeada, ListaEncadeadaLinkedList, ListaEncadeadaArrayList, No
+3) Dominio: Series
+4) Util: MedidorTempo, ResultadoMedicao
 
 # Como rodar
