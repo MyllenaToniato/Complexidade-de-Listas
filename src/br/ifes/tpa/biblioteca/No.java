@@ -22,7 +22,7 @@ public class No<T> { // O <T> é o Generics, permitindo o nó carregar qualquer 
         return proximo;
     }
 
-    public void setProximo(No<T> proximo) { // liga um nó ao outro, retornando o endereço do proximo
+    public void setProximo(No<T> proximo) { // liga um nó ao outro
         this.proximo = proximo;
     }
 
